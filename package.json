@@ -1,0 +1,47 @@
+{
+  "name": "travel-app",
+  "version": "1.0.0",
+  "description": "Smart Travel App for SIH 2025",
+  "main": "index.js",
+  "scripts": {
+    "install-client": "cd client && npm install",
+    "install-server": "cd server && npm install",
+    "install-all": "npm run install-client && npm run install-server",
+    "start": "concurrently \"npm run server\" \"npm run client\"",
+    "server": "cd server && npm run dev",
+    "client": "cd client && npm start",
+    "build": "cd client && npm run build",
+    "heroku-postbuild": "npm run install-all && npm run build"
+  },
+  "keywords": [
+    "travel",
+    "tourism",
+    "react",
+    "nodejs",
+    "mongodb",
+    "sih2025"
+  ],
+  "author": "SIH 2025 Team",
+  "license": "MIT",
+  "devDependencies": {
+    "concurrently": "^8.2.0"
+  },
+  "dependencies": {
+    "@react-google-maps/api": "^2.20.7",
+    "@tailwindcss/forms": "^0.5.10",
+    "@tailwindcss/typography": "^0.5.16",
+    "@types/node": "^24.3.3",
+    "@types/react": "^19.1.13",
+    "@types/react-dom": "^19.1.9",
+    "@types/react-router-dom": "^5.3.3",
+    "axios": "^1.12.1",
+    "date-fns": "^4.1.0",
+    "framer-motion": "^12.23.12",
+    "lucide-react": "^0.544.0",
+    "react-hot-toast": "^2.6.0",
+    "react-loading-skeleton": "^3.5.0",
+    "react-router-dom": "^7.9.1",
+    "socket.io-client": "^4.8.1",
+    "tailwindcss": "^4.1.13"
+  }
+}
